@@ -27,7 +27,7 @@ This project implements a simple booking system with login, booking, and logout 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/n-marcelino/demo-login-booking-logout.git
+    git clone https://github.com/n-marcelino/demo-login-booking-logout
     ```
 
 2. Open `index.html` in your web browser to view the application.
