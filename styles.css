@@ -1,0 +1,56 @@
+.credentials-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.credentials-box-header {
+    background-color: #9c9c9c;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+}
+
+.credentials-table {
+    width: 100%;
+}
+
+.credentials-table th:first-child,
+.credentials-table td:first-child {
+    width: 30px;
+    background-color: #9c9c9c;
+    color: #fff;
+}
+
+.credentials-table th,
+.credentials-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.confirmation-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.confirmation-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.confirmation-box th,
+.confirmation-box td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.confirmation-box th {
+    text-align: left;
+    width: 30%;
+}

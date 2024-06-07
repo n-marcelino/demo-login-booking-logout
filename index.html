@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="mt-5 mb-3">Booking System Demo</h1>
+
+        <div id="loginForm">
+            <h2>Login</h2>
+            <form id="login">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <div class="credentials-box">
+                <div class="credentials-box-header">Valid Credentials</div>
+                <table class="credentials-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody id="credentialsBody">
+                        <!-- Credentials will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="bookingForm" style="display: none;">
+            <h2>Welcome, <span id="loggedInUsername"></span>!</h2>
+            <form id="booking">
+                <div class="form-group">
+                    <label for="eventType">Type of Event:</label>
+                    <select class="form-control" id="eventType" required>
+                        <option value="">Select Event Type</option>
+                        <option value="Birthday">Birthday</option>
+                        <option value="Anniversary">Anniversary</option>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Corporate Event">Corporate Event</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date of Event:</label>
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time:</label>
+                    <select class="form-control" id="time">
+                        <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                        <option value="afternoon">Afternoon (1:00 PM - 4:00 PM)</option>
+                        <option value="evening">Evening (5:00 PM - 8:00 PM)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" class="form-control" id="guests" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="venue">Venue:</label>
+                    <select class="form-control" id="venue">
+                        <option value="">Select Venue</option>
+                        <option value="Indoor Hall">Indoor Hall</option>
+                        <option value="Outdoor Garden">Outdoor Garden</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="Hotel Banquet Hall">Hotel Banquet Hall</option>
+                        <option value="Community Center">Community Center</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="occasion">Occasion:</label>
+                    <input type="text" class="form-control" id="occasion" required>
+                </div>
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests:</label>
+                    <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Book</button>
+            </form>
+        </div>
+
+        <div id="bookingConfirmation" style="display: none;">
+            <h2>Booking Confirmation</h2>
+            <div class="confirmation-box">
+                <p>Your booking details:</p>
+                <table class="table">
+                    <tbody id="confirmationDetails">
+                        <tr>
+                            <th>Type of Event</th>
+                            <td><span id="confirmEventType"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Date of Event</th>
+                            <td><span id="confirmDate"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Preferred Time</th>
+                            <td><span id="confirmTime"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Number of Guests</th>
+                            <td><span id="confirmGuests"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Venue</th>
+                            <td><span id="confirmVenue"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Occasion</th>
+                            <td><span id="confirmOccasion"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Special Requests</th>
+                            <td><span id="confirmSpecialRequests"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Your slot has been booked successfully!</p>
+            </div>
+        </div>
+
+        <button id="logoutBtn" class="btn btn-danger mt-3" style="display: none;">Logout</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
